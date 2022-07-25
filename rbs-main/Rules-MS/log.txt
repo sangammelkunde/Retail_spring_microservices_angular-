@@ -1,0 +1,72 @@
+2021-08-05 11:05:57.610  INFO 7684 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-08-05 11:05:59.912  INFO 7684 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-08-05 11:05:59.914  WARN 7684 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/rules-ms/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-08-05 11:05:59.921  INFO 7684 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : No active profile set, falling back to default profiles: default
+2021-08-05 11:06:01.817  INFO 7684 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-08-05 11:06:01.880  INFO 7684 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 JPA repository interfaces.
+2021-08-05 11:06:02.429  INFO 7684 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ef0399e6-a812-3d90-b38b-e634968b0a3b
+2021-08-05 11:06:04.098  INFO 7684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9996 (http)
+2021-08-05 11:06:04.116  INFO 7684 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-05 11:06:04.117  INFO 7684 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-05 11:06:04.337  INFO 7684 --- [restartedMain] o.a.c.c.C.[.[localhost].[/rules-ms]      : Initializing Spring embedded WebApplicationContext
+2021-08-05 11:06:04.338  INFO 7684 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4376 ms
+2021-08-05 11:06:04.407  INFO 7684 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-05 11:06:04.714  INFO 7684 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-05 11:06:04.728  INFO 7684 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:fd2997bc-f4ea-4fb0-a68d-69a28e5756db'
+2021-08-05 11:06:04.940  INFO 7684 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-05 11:06:05.020  INFO 7684 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-05 11:06:05.157  INFO 7684 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-08-05 11:06:05.465  INFO 7684 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-05 11:06:05.528  WARN 7684 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-05 11:06:06.064  INFO 7684 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-05 11:06:06.144  INFO 7684 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-05 11:06:06.243  WARN 7684 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-05 11:06:06.244  INFO 7684 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-05 11:06:06.256  WARN 7684 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-05 11:06:06.257  INFO 7684 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-05 11:06:06.554  WARN 7684 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-05 11:06:06.748  INFO 7684 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-05 11:06:06.762  INFO 7684 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-05 11:06:07.643  INFO 7684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9996 (http) with context path '/rules-ms'
+2021-08-05 11:06:08.268  INFO 7684 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-05 11:06:08.297  INFO 7684 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-05 11:06:08.347  INFO 7684 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-05 11:06:08.509  INFO 7684 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-08-05 11:06:08.511  INFO 7684 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-08-05 11:06:08.522  INFO 7684 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : Started RulesMsApplication in 13.485 seconds (JVM running for 14.621)
+2021-08-05 11:58:35.810  INFO 17464 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-08-05 11:58:38.050  INFO 17464 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-08-05 11:58:38.051  WARN 17464 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/rules-ms/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-08-05 11:58:38.057  INFO 17464 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : No active profile set, falling back to default profiles: default
+2021-08-05 11:58:39.361  INFO 17464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-08-05 11:58:39.397  INFO 17464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 JPA repository interfaces.
+2021-08-05 11:58:39.773  INFO 17464 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ef0399e6-a812-3d90-b38b-e634968b0a3b
+2021-08-05 11:58:40.968  INFO 17464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9996 (http)
+2021-08-05 11:58:40.984  INFO 17464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-05 11:58:40.984  INFO 17464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-05 11:58:41.166  INFO 17464 --- [restartedMain] o.a.c.c.C.[.[localhost].[/rules-ms]      : Initializing Spring embedded WebApplicationContext
+2021-08-05 11:58:41.167  INFO 17464 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3075 ms
+2021-08-05 11:58:41.303  INFO 17464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-05 11:58:41.606  INFO 17464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-05 11:58:41.618  INFO 17464 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:563c3cfe-73aa-4502-9db1-b0a2c8d9f5e4'
+2021-08-05 11:58:41.802  INFO 17464 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-05 11:58:41.896  INFO 17464 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-05 11:58:42.021  INFO 17464 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-08-05 11:58:42.320  INFO 17464 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-05 11:58:42.373  WARN 17464 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-05 11:58:42.681  INFO 17464 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-05 11:58:42.718  INFO 17464 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-05 11:58:42.781  WARN 17464 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-05 11:58:42.782  INFO 17464 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-05 11:58:42.798  WARN 17464 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-05 11:58:42.798  INFO 17464 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-05 11:58:43.101  WARN 17464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-05 11:58:43.292  INFO 17464 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-05 11:58:43.308  INFO 17464 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-05 11:58:44.213  INFO 17464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9996 (http) with context path '/rules-ms'
+2021-08-05 11:58:44.809  INFO 17464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-05 11:58:44.834  INFO 17464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-05 11:58:44.880  INFO 17464 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-05 11:58:45.041  INFO 17464 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-08-05 11:58:45.042  INFO 17464 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-08-05 11:58:45.055  INFO 17464 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : Started RulesMsApplication in 11.765 seconds (JVM running for 12.775)

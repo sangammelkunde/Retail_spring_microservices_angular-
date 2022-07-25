@@ -1,0 +1,39 @@
+2021-05-03 13:42:44.211  INFO 1168 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-05-03 13:42:45.223  INFO 1168 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-05-03 13:42:45.224  WARN 1168 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/rules-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-03 13:42:45.227  INFO 1168 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : No active profile set, falling back to default profiles: default
+2021-05-03 13:42:46.049  INFO 1168 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-03 13:42:46.053  INFO 1168 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2021-05-03 13:42:46.168  INFO 1168 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73a0db2e-50fa-3e49-8a3f-f98ed2d28596
+2021-05-03 13:42:46.497  INFO 1168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2021-05-03 13:42:46.499  INFO 1168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-03 13:42:46.499  INFO 1168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-05-03 13:42:46.547  INFO 1168 --- [restartedMain] o.a.c.c.C.[.[localhost].[/rules-ms]      : Initializing Spring embedded WebApplicationContext
+2021-05-03 13:42:46.547  INFO 1168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1305 ms
+2021-05-03 13:42:46.583  INFO 1168 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2021-05-03 13:42:46.587  INFO 1168 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2021-05-03 13:42:46.588  INFO 1168 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:3056197a-5fb7-4386-a4f7-b5f16d99b5a6'
+2021-05-03 13:42:46.649  INFO 1168 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:42:46.660  INFO 1168 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-03 13:42:46.676  INFO 1168 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-03 13:42:46.716  INFO 1168 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-03 13:42:46.717  INFO 1168 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-03 13:42:46.743  INFO 1168 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-03 13:42:46.839  WARN 1168 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-03 13:42:46.949  INFO 1168 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-03 13:42:46.968  WARN 1168 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-03 13:42:46.968  INFO 1168 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-03 13:42:47.932  INFO 1168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path '/rules-ms'
+2021-05-03 13:42:48.666  INFO 1168 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-03 13:42:48.668  INFO 1168 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-03 13:42:48.684  INFO 1168 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-03 13:42:48.705  INFO 1168 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-03 13:42:48.706  INFO 1168 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-03 13:42:48.716  INFO 1168 --- [restartedMain] com.cognizant.rules.RulesMsApplication   : Started RulesMsApplication in 6.509 seconds (JVM running for 4197.786)
+2021-05-03 13:42:48.720  INFO 1168 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-03 13:42:59.124  INFO 1168 --- [Thread-239] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-03 13:42:59.125  INFO 1168 --- [Thread-239] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-03 13:42:59.127  INFO 1168 --- [Thread-239] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:42:59.329  WARN 1168 --- [Thread-239] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-05-03 13:42:59.331  INFO 1168 --- [Thread-239] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2021-05-03 13:42:59.339  INFO 1168 --- [Thread-239] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.

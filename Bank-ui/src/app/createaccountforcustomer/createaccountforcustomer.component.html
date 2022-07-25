@@ -1,0 +1,134 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>MFPE Bank Portal.</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none">
+      <i class="icofont-navigation-menu"></i>
+    </button>
+
+    <!-- ======= Header ======= -->
+    <app-navbar></app-navbar>
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Create Account for Customer Section ======= -->
+      <section id="createaccountforcustomer" class="createaccountforcustomer">
+        <div class="container">
+          <div class="section-title">
+            <h2>Create Account For Customer</h2>
+          </div>
+
+          <div class="row d-block">
+            <form #f="ngForm">
+              <div class="col-lg-6" data-aos="fade-up">
+                <div class="form-group">
+                  <label>Enter the Customer Id:</label>
+                  <input
+                    [(ngModel)]="account.customerId"
+                    name="customerId"
+                    class="form-control"
+                    type="text"
+                    required
+                    #customerId="ngModel"
+                  />
+                  <br/>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="!customerId.valid && customerId.touched"
+                    >Please enter a valid customerId</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label>Enter the Owner Name:</label>
+                  <input
+                    [(ngModel)]="account.ownerName"
+                    name="ownerName"
+                    class="form-control"
+                    type="text"
+                    required
+                    #ownerName="ngModel"
+                  />
+                  <br/>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="!ownerName.valid && ownerName.touched"
+                    >Please enter a valid owner name</span
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up " data-aos-delay="100 ">
+                <div class="form-group">
+                  <label>Select the Account Type</label><br />
+                  <select
+                    [(ngModel)]="account.accountType"
+                    class="form-control"
+                    name="accountType"
+                    required
+                    #accountType="ngModel"
+                  >
+                    <option value="Savings ">Savings</option>
+                    <option value="Current ">Current</option>
+                  </select>
+                  <br/>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="!accountType.valid && accountType.touched"
+                    >Please select account type</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label>Enter the Balance:</label>
+                  <input
+                    [(ngModel)]="account.balance"
+                    name="balance "
+                    class="form-control"
+                    type="text "
+                    required
+                    #balance="ngModel"
+                  />
+                  <br/>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="!balance.valid && balance.touched"
+                    >Please enter valid amount</span
+                  >
+                </div>
+
+                <button
+                  (click)="createAccount()"
+                  accesskey="s "
+                  type="submit "
+                  [disabled]="!f.valid"
+                  mat-raised-button color="primary"
+                >
+                  Submit
+                </button>
+                <button style="margin-left: 10px;" type="reset" mat-raised-button color="warn">Reset</button>
+                <p *ngIf="isAccountCreated" class="alert alert-success m-2">
+                  Account created successfully!
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Create Account For Customer Section -->
+    </main>
+   
+    <a href="# " class="back-to-top"><i class="icofont-simple-up"></i></a>
+  </body>
+</html>

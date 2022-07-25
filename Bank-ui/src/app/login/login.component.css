@@ -1,0 +1,26 @@
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+} */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center{
+    text-align: center;
+}
+
+.mt{
+    margin-top: 20px;
+}
+
+.full-width{
+    width: 100%;
+}

@@ -1,0 +1,69 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+    <title>MFPE Bank Portal.</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <app-navbar></app-navbar>
+    <!-- End Header -->
+
+
+
+    <main id="main">
+
+
+
+        <!-- ======= Service Charge Deduction Section ======= -->
+        <section id="servicechargededuction" class="servicechargededuction">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Service Charge Deduction</h2>
+
+                    <h3>Charges will be deducted from accounts for not maintaining minimum balance.</h3>
+                    <form>
+                        <button (click)="deduct()" type="submit" mat-raised-button color="primary">Deduct</button>
+                        <br>
+                        <div>
+                            <h5 *ngIf="isDeducted" class="alert alert-primary m-2">{{ no_of_deducted }} accounts were deducted</h5>
+                        </div>
+                        <div>
+                            <h5 *ngIf="!isDeductable" class="alert alert-primary m-2">Services charges can only be deducted once per month.</h5>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <!-- End service charge Section -->
+
+    </main>
+    <!-- End #main -->
+
+    
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+</body>
+
+</html>

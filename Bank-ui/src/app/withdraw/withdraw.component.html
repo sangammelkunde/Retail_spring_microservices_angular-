@@ -1,0 +1,88 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+    <title>MFPE Bank Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <app-navbar></app-navbar>
+
+    <!-- End Header -->
+
+
+
+    <main id="main">
+
+
+        <!-- ======= withdraw Section ======= -->
+        <section id="withdraw" class="withdraw">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Withdrawal</h2>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <form #f="ngForm">
+                            <div class="form-group">
+                                <label>Enter Customer Account Id:</label>
+                                <select [(ngModel)]="accountInfo.accountId" type="text" name="accountId" class="form-control" id="accountId" required #accountId="ngModel">
+                                <option *ngFor="let acc of accounts" value={{acc.accountId}}>{{acc.accountId}}</option>
+                                </select>
+                                <br>
+                                <span class="alert alert-danger " *ngIf="!accountId.valid && accountId.touched ">Please enter a valid account Id</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Enter Amount:</label>
+                                <input [(ngModel)]="accountInfo.balance" type="text" name="balance" class="form-control" id="balance" required #balance="ngModel" />
+                                <br/>
+                                <span class="alert alert-danger " *ngIf="!balance.valid && balance.touched ">Please enter a valid customerId</span>
+                            </div>
+                            <br>
+
+                            <button (click)="withdraw()" type="submit" [disabled]="!f.valid" mat-raised-button color="primary">Withdraw</button>
+
+                            <button (click)="checkBalance()" type="submit" [disabled]="!accountId.valid" class="ml-3" mat-raised-button color="primary">Check Balance</button>
+
+                            <p *ngIf="isWithdrawn" class="alert alert-success m-2">Amount withdrawn successfully!</p>
+                            <p *ngIf="isBalanceRetrieved" class="alert alert-success m-2">Your balance is <b>Rs.{{balanceObj.balance}}</b></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End withdraw Section -->
+
+
+    </main>
+    <!-- End #main -->
+
+    
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+</body>
+
+</html>

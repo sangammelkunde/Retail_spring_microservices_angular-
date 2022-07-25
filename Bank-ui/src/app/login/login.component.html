@@ -1,0 +1,42 @@
+<app-navbar-top></app-navbar-top>
+
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="container text-center">
+                    <!-- <img class="img-fluid" width="100px" src="/assets/img/lock1.png" alt="lock-image"> -->
+                </div>
+                
+                <!-- creating form -->
+                <mat-card>      
+                <form #f="ngForm" action="">
+                    <h1 class="text-center">Login Here !</h1>
+                    <!-- creating input fields -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>UserID</mat-label>
+                        <input required type="text" [(ngModel)]="userid" name="userid" matInput/>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input required type="password" [(ngModel)]="password" name="password" matInput/>
+                    </mat-form-field>
+
+                    <!-- creating buttons -->
+                    <div class="container text-center">
+                        <button (click)=checkLogin() style="margin-right: 10px" type="submit" mat-raised-button color="primary">
+                            Submit
+                        </button>
+                        <!-- <button type="reset" mat-stroked-button color="primary">
+                            Reset
+                        </button> -->
+                        <a routerLink="/" mat-stroked-button color="primary">Back</a>
+                    </div>
+
+                </form>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+

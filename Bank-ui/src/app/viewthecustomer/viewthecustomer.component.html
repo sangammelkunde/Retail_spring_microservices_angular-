@@ -1,0 +1,91 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+    <title>MFPE Bank Portal.</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <app-navbar></app-navbar>
+    <!-- End Header -->
+
+
+
+    <main id="main">
+
+
+
+
+        <!-- ======= View The Customer Section ======= -->
+        <section id="viewthecustomer" class="viewthecustomer">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>View The Customer Details</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form #f="ngForm">
+                        <div class="form-group">
+                            <label>customerId</label>
+                            <input type=" text " [(ngModel)]="customerId " name="customerId " id="customerId " class="form-control " required />
+                            <!--<span class="alert alert-danger " *ngIf="!customerId.valid && customerId.touched ">Please enter a valid customerId</span>-->
+                            <br>
+                            <button (click)="viewCustomer() " type="submit " [disabled]="!f.valid" mat-raised-button color="primary">View</button>
+                            <!-- <button style="margin-left: 10px;" type="reset" mat-raised-button color="warn">Reset</button> -->
+                        </div>
+                    </form>
+                    <br>
+
+                    <table *ngIf="isFetched " cellpadding="5 " class="table " style="width: 900; ">
+                        <tr>
+                            <th>CUSTOMER ID</th>
+                            <th>CUSTOMER NAME</th>
+                            <th>DOB</th>
+                            <th>PAN</th>
+                            <th>ADDRESS</th>
+                        </tr>
+                        <tr>
+                            <td>{{customer.userid}}</td>
+                            <td>{{customer.username}}</td>
+                            <td>{{customer.dateOfBirth}}</td>
+                            <td>{{customer.pan_no}}</td>
+                            <td>{{customer.address}}</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
+
+
+</body>
+
+</html>

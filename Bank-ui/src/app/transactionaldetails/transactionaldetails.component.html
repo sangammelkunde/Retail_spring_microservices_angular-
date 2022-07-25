@@ -1,0 +1,108 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+  
+    <title>MFPE Bank Portal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <app-navbar></app-navbar>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= transactiondetails Section ======= -->
+    <section id="transactiondetails" class="transactiondetails">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Transactional Details</h2>
+        </div>
+
+
+        <div class="row">
+        
+          <div class="col-lg-6">
+            <h3>Get Statement</h3>
+           <form >
+             <div class="form-group">
+               <label>Account Id.</label>
+               <select type="text" name="accountId" [(ngModel)]="accountId" id="accountId" required="required" class="form-control">
+               <option *ngFor="let acc of accounts" value={{acc.accountId}}>{{acc.accountId}}</option>
+               </select>
+              </div>
+              <div class="form-group">
+                <label>From Date.</label>
+                <input name="fromDate" [(ngModel)]="fromDate" id="fromDate" type="date"  class="form-control"/> 
+              </div>
+              <div class="form-group">
+                <label>To Date.</label>
+                <input name="toDate" [(ngModel)]="toDate" id="toDate" type="date"  class="form-control"/> 
+              </div>
+                  <br>
+                    <button (click)="getTransactions()" type="submit" mat-raised-button color="primary">Submit</button>
+                    <button style="margin-left: 10px;" type="reset" mat-raised-button color="warn">Reset</button>
+            </form>
+        </div>
+
+      </div>
+      <hr>
+      <div>
+          <table *ngIf="isGenerated" cellpadding="5" class="table" style="width: 900;">
+						<tr >
+							<th>TRANSACTION ID</th>
+							<th>SOURCE OWNER ID</th>
+							<th>SOURCE OWNER NAME</th>
+							<th>TARGET OWNER ID</th>
+							<th>TARGET OWNER NAME</th>
+							<th>AMOUNT</th>
+							<th>DATE OF TRANSACTION</th>
+							<th>TYPE OF TRANSACTION</th>
+						</tr>
+						
+						<tr *ngFor="let tran of transactions">
+							<td>{{tran.id}}</td>
+							<td>{{tran.sourceAccountId}}</td>
+							<td>{{tran.sourceOwnerName}}</td>
+							<td>{{tran.targetAccountId}}</td>
+							<td>{{tran.targetOwnerName}}</td>
+							<td>{{tran.amount}}</td>
+							<td>{{tran.dateOfTransaction}}</td>
+							<td>{{tran.typeOfTransaction}}</td>
+						</tr>
+						
+					</table>
+      </div>
+      </div>
+      
+    </section><!-- End transaction details Section -->
+
+
+
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
+</body>
+
+</html>

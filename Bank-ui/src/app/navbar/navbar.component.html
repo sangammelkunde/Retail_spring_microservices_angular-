@@ -1,0 +1,79 @@
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+<body>
+    <!-- ======= Header ======= -->
+    <header *ngIf="isEmployee" id="header"  class="d-flex flex-column justify-content-between">
+       
+        <div class="d-flex flex-column">
+
+            <div class="profile" [style.background-color]="'blue'">
+                 <img src="assets/img/dummy.svg" alt="dummy-img" class="img-fluid rounded-circle" [style.background-color]="'blue'">
+                <h1 class="text-light"><a routerLink="/employeedashboard">Employee </a></h1>
+
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li>
+                        <a routerLink="/employeedashboard"> <span>Home</span></a>
+                    </li>
+                    <li>
+                        <a routerLink="/deposit"> <span>Deposit</span></a>
+                    </li>
+                    <li><a routerLink="/createcustomer"><span>Create Customer</span></a></li>
+                    <li>
+                        <a routerLink="/createaccountforcustomer"> <span>Create Account for Customer</span></a>
+                    </li>
+                    <li><a routerLink="/deletecustomer"> Delete Customer</a></li>
+                    <li><a routerLink="/viewthecustomer"> View the Customer</a></li>
+                    <li><a routerLink="/servicechargededuction"> Service Charge Deduction</a></li>
+                    <li><a routerLink="/" (click)="logout()"> Logout</a></li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+            <button class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+        </div>
+        <footer id="footer fixed-bottom mx-auto p-2">
+            <div class="container">
+               
+                  <div class="credits text-light">
+                      Designed by POD-4                 
+                     </div>
+              </div>
+          </footer>
+    </header>
+
+    <header *ngIf="!isEmployee" id="header" class="d-flex flex-column justify-content-between">
+        <div class="d-flex flex-column" >
+    
+            <div class="profile" [style.background-color]="'blue'">
+              <img src="assets/img/dummy.svg" alt="dummy-img" class="img-fluid rounded-circle">
+              <h1 class="text-light"><a routerLink="/customerdashboard">Customer </a></h1>
+              
+            </div>
+    
+            <nav class="nav-menu">
+                <ul>
+                  <li><a routerLink="/customerdashboard"> <span>Home</span></a></li>
+                  <li><a routerLink="/customeraccounts"> <span>My Accounts</span></a></li>
+                  <li><a routerLink="/withdraw"> <span>Withdrawal/Check Balance</span></a></li>
+                  <li><a routerLink="/transfer"><span>Transfer</span></a></li>
+                  <li><a routerLink="/transactionaldetails"><span>Statement</span></a></li>
+                  <li><a (click)="logout()" routerLink="/" >Logout</a></li>
+                </ul>
+              </nav><!-- .nav-menu -->
+              <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+          </div>
+          
+          
+          <footer id="footer fixed-bottom mx-auto p-2">
+            <div class="container">
+               
+                  <div class="credits text-light">
+                      Designed by POD-4
+                  </div>
+              </div>
+          </footer>
+        </header>
+    </body>
+    

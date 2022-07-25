@@ -1,0 +1,76 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+<title>MFPE Bank Portal.</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <app-navbar></app-navbar>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= transactiondetails Section ======= -->
+    <section id="transactiondetails" class="transactiondetails">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Account Details</h2>
+        </div>
+
+	
+        
+      
+      <div>
+          <table class="table" cellpadding="5" style="width: 900;">
+						<tr >
+							<th>ACCOUNT ID</th>
+							<th>CUSTOMER ID</th>
+							<th>OWNER NAME</th>
+							<th>BALANCE</th>
+							<th>ACCOUNT TYPE</th>
+						</tr>
+						
+						<tr *ngFor="let acc of accounts">
+							<td> {{acc.accountId}}</td>
+							<td> {{acc.customerId}}</td>
+							<td> {{acc.ownerName}}</td>
+							<td> {{acc.balance}}</td>
+							<td> {{acc.accountType}}</td>
+						</tr>
+						
+					</table>
+      </div>
+      </div>
+      
+    </section><!-- End transaction details Section -->
+
+
+
+  </main><!-- End #main -->
+
+ 
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
+</body>
+
+</html>

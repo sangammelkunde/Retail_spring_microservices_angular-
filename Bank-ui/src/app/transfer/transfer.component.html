@@ -1,0 +1,94 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+    <title>MFPE Bank Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <app-navbar></app-navbar>
+
+    <!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= transfer Section ======= -->
+        <section id="transfer" class="transfer">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Transfer</h2>
+                </div>
+
+                
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form #f="ngForm">
+                            <div class="form-group">
+                                <label>Enter Source Customer Account Id:</label>
+                                <select [(ngModel)]=" transactionInput.sourceAccount " type="text " name="sourceAccount " class="form-control " id="sourceAccount " required #sourceAccount="ngModel" >
+                                <option *ngFor="let acc of accounts" value={{acc.accountId}}>{{acc.accountId}}</option>
+                                </select>
+                                <span class="alert alert-danger " *ngIf="!sourceAccount.valid && sourceAccount.touched ">Please enter a valid account id</span>
+                                <!-- <errors path="sourceAccount " class="text-danger "/> -->
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label>Enter Target Customer Account Id:</label>
+                                <input [(ngModel)]=" transactionInput.targetAccount " type="text " name="targetAccount " class="form-control " id="targetAccount " required #targetAccount="ngModel" />
+                                <span class="alert alert-danger " *ngIf="!targetAccount.valid && targetAccount.touched ">Please enter a valid account id</span>
+                                <!-- <errors path="targetAccount " class="text-danger "/> -->
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for=" name ">Enter Amount:</label>
+                                <input [(ngModel)]="transactionInput.amount " type="text " name="amount " class="form-control " id="amount " required #amount="ngModel" />
+                                <!-- <errors path="amount " class="text-danger "/> -->
+                                <span class="alert alert-danger " *ngIf="!amount.valid && amount.touched ">Please enter a valid amount</span>
+                                <br>
+                            </div>
+
+                            <button (click)="transfer() " type="submit " [disabled]="!f.valid " mat-raised-button color="primary">Submit</button>
+
+                            <p *ngIf="isTransfered " class="alert alert-success m-2 ">Amount transfered successfully!</p>
+                            <button style="margin-left: 10px;" type="reset" mat-raised-button color="warn">Reset</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End transfer Section -->
+
+
+
+    </main>
+    <!-- End #main -->
+
+   
+
+    <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
+
+
+
+</body>
+
+</html>
